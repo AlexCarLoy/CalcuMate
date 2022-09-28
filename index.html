@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CalcuMate</title>
+
+    <link rel="stylesheet" href="style.css">
+    <script src="./function.js"></script>
+
+</head>
+<body>
+    <form id="CalcuMate">
+        
+            
+                <h2>Bienvenido</h2>
+                <h3>a</h3>
+                <h1>CalcuMate</h1>
+            
+
+
+        <hr>
+            
+                <label>Inserta el numero 1</label>
+                <input type="number" name="" id="numero1" placeholder="ej: 11" required>
+            
+        <br>
+            
+                <button onclick="Limpiar();">Limpiar campos</button>
+            
+
+        <br>
+            
+                <label>Inserta el numero 2</label>
+                <input type="number" name="" id="numero2" placeholder="ej: 19" required>
+            
+            
+                <button type="button" onclick="Sumar();">Sumar</button>
+                <button type="button" onclick="Restar();">Restar</button>
+                <button type="button" onclick="Multiplicar();">Multiplicar</button>
+                <button type="button" onclick="Dividir();">Dividir</button>
+            
+        
+        <p>El resultado es: <span id="Resultado"></span></p>
+    </form>
+    <script src="./js/bootstrap.bundle.js"></script>
+
+    <script src="script.js"></script>
+</body>
+</html>
