@@ -1,23 +1,37 @@
-function Limpiar() {e
-    document.getElementById('CalcuMate').reset()
+const inputNum1 = document.getElementById("num1")
+const inputNum2 = document.getElementById("num2")
+const inputRes = document.getElementById("result")
+
+const btnSum = document.getElementById("sum")
+const btnRes = document.getElementById("res")
+const btnMul = document.getElementById("mul")
+const btnDiv = document.getElementById("div")
+
+const sum = (a, b) => a + b
+const res = (a, b) => a - b
+const mul = (a, b) => a * b
+const div = (a, b) => a / b
+
+
+const handleSum = () => {
+    const num1 = parseInt(inputNum1.value)
+    const num2 = parseInt(inputNum2.value)
+    inputRes.value = sum(num1, num2)
 }
-function Sumar() {
-    let n1 = parseInt(document.getElementById('numero1').value)
-    let n2 = parseInt(document.getElementById('numero2').value)
-    document.getElementById("Resultado").innerHTML = (n1+n2);
+
+const handleRes = () => {
+    inputRes.value = res(inputNum1.value, inputNum2.value)
 }
-function Restar() {
-    let n1 = parseInt(document.getElementById('numero1').value)
-    let n2 = parseInt(document.getElementById('numero2').value)
-    document.getElementById("Resultado").innerHTML = (n1-n2);
+
+const handleMul = () => {
+    inputRes.value = mul(inputNum1.value, inputNum2.value)
 }
-function Multiplicar() {
-    let n1 = parseInt(document.getElementById('numero1').value)
-    let n2 = parseInt(document.getElementById('numero2').value)
-    document.getElementById("Resultado").innerHTML = (n1*n2);
+
+const handleDiv = () => {
+    inputRes.value = div(inputNum1.value, inputNum2.value)
 }
-function Dividir() {
-    let n1 = parseInt(document.getElementById('numero1').value)
-    let n2 = parseInt(document.getElementById('numero2').value)
-    document.getElementById("Resultado").innerHTML = (n1/n2);
-}
+
+btnSum.addEventListener("click", handleSum)
+btnRes.addEventListener("click", handleRes)
+btnMul.addEventListener("click", handleMul)
+btnDiv.addEventListener("click", handleDiv)

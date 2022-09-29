@@ -1,51 +1,73 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CalcuMate</title>
-
-    <link rel="stylesheet" href="style.css">
-    <script src="./function.js"></script>
-
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="./css/bootstrap.min.css">
+        <link rel="stylesheet" href="style.css">
+        <title>CalcuMate</title>
+        <link rel="icon" href="assets/img/iaIcon.png">
 </head>
+
 <body>
-    <form id="CalcuMate">
+        <div class="container-sm">
+                <div class="row my-5 center-content-md-left">
+                        <h2>Bienvenido</h2>
+                        <h3>a</h3>
+                        <h1>CalcuMate</h1>
+                </div>
+        </div>
+        <div class="card">
+                <div class="card-body">
+                        CalcuMate es un asistente para realizar operaciones simples de "Sumas, Restas, Multiplicaciones o Divisiones"
+                        <br> Instrucciones: el primer numero sera llamada "base" el segundo numero sera llamado "actor"
+                        <br> La base sera la afectada por el actor en todas las operaciones, tal y como se ve en estos ejemplos:
+                        <br> 2  "Sumar"       10 "Resultado" 12
+                        <br> 10 "Restar"      2  "Resultado" 8
+                        <br> 2  "Multiplicar" 10 "Resultado" 20
+                        <br> 10 "Dividir"     2  "Resultado" 5
+                </div>
+        </div>
         
-            
-                <h2>Bienvenido</h2>
-                <h3>a</h3>
-                <h1>CalcuMate</h1>
-            
-
-
-        <hr>
-            
-                <label>Inserta el numero 1</label>
-                <input type="number" name="" id="numero1" placeholder="ej: 11" required>
-            
-        <br>
-            
-                <button onclick="Limpiar();">Limpiar campos</button>
-            
-
-        <br>
-            
-                <label>Inserta el numero 2</label>
-                <input type="number" name="" id="numero2" placeholder="ej: 19" required>
-            
-            
-                <button type="button" onclick="Sumar();">Sumar</button>
-                <button type="button" onclick="Restar();">Restar</button>
-                <button type="button" onclick="Multiplicar();">Multiplicar</button>
-                <button type="button" onclick="Dividir();">Dividir</button>
-            
-        
-        <p>El resultado es: <span id="Resultado"></span></p>
-    </form>
-    <script src="./js/bootstrap.bundle.js"></script>
-
-    <script src="script.js"></script>
+        <div class="container-sm">
+                <div class="row my-5 justify-content-md-center">
+                        <div class="col">
+                                <p>Escribe tu primer numero</p>
+                                <input placeholder="Escribe un numero" id='num1' type="text" class="form-control">
+                        </div>
+                        <div class="col">
+                                <p>Escribe tu segundo numero</p>
+                                <input placeholder="Escribe un numero" id='num2' type="text" class="form-control">
+                        </div>
+                </div>
+                <div class="row">
+                        <div class="col">
+                                <p>Aqui esta su resultado</p>
+                                <input class='col' placeholder="Resultado" id='result' type="text">
+                        </div>
+                </div>
+        </div>
+        <div class="container-sm">
+                <div class="row my-5">
+                        <div class="col">
+                                <button class="btn btn-outline-success" id='sum'>Sumar</button>
+                        </div>
+                        <div class="col">
+                                <button class="btn btn-outline-danger" id="res">Restar</button>
+                        </div>
+                        <div class="col">
+                                <button class="btn btn-outline-primary" id="mul">Multiplicar</button>
+                        </div>
+                        <div class="col">
+                                <button class="btn btn-outline-info" id="div">Dividir</button>
+                        </div>
+                </div>
+        </div>
+        <!-- Bootstrap -->
+        <script src="./js/bootstrap.bundle.min.js"></script>
+        <script src="function.js"></script>
 </body>
+
 </html>
